@@ -14,7 +14,7 @@ const Hero = () => {
           alt="Hero Image"
           radius="lg"
           width="100%"
-          style={{ height: "70vh", objectFit: "cover", margin: "0 auto" }}
+          style={{ height: "70vh", objectFit: "cover", margin: "0 auto",zIndex:1 }}
         />
         <div
           style={{
@@ -22,7 +22,7 @@ const Hero = () => {
             top: "50%",
             left: "50%",
             transform: "translate(-50%, -50%)",
-            zIndex: 999,
+            zIndex: 2,
             width: "100%",
           }}
         >

@@ -110,7 +110,7 @@ export default function Navbar(props) {
                             : router.push(item.href)
                         }
                         key={`${item.label}${index}`}
-                        className="px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
+                        className="px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400 cursor-pointer"
                         target={item.external ? "_blank" : ""}
                         rel={item.external ? "noopener" : ""}
                       >
