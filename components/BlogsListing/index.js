@@ -1,4 +1,4 @@
-import blogsData  from "@/app/blogsData";
+import blogsData  from "app/blogsData";
 import SectionHeader from "../common/SectionHeader";
 import { SingleCard } from "./SingleCard";
 

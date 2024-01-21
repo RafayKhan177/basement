@@ -1,4 +1,4 @@
-import blogsData from "@/app/blogsData";
+import blogsData from "app/blogsData";
 import Body from "./Body";
 
 export default function Post() {

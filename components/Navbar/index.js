@@ -1,23 +1,35 @@
 "use client";
 
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { Disclosure } from "@headlessui/react";
-import Container from "@/components/container";
+import Container from "components/container";
 import Link from "next/link";
 import Image from "next/image";
-// import { urlForImage } from "@/lib/sanity/image";
-import cx from "clsx";
 import DropdownMenu from "./DropdownMenu";
 import { leftmenu, rightmenu } from "./pages";
-// import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import Menu from "./Menu";
+import { useRouter } from "next/navigation";
 
 export default function Navbar(props) {
- 
+  const router = useRouter();
 
   const mobilemenu = [...leftmenu, ...rightmenu];
 
+  const [open, setOpen] = useState(false);
+  const [selectedSubpages, setSelectedSubpages] = useState([]);
+
+  const toggleMenu = () => {
+    setOpen(!open);
+    console.log(open);
+  };
+
   return (
     <Container>
+      <Menu
+        open={open}
+        selectedSubpages={selectedSubpages}
+        toggleMenu={toggleMenu}
+      />
       <nav>
         <Disclosure>
           {({ open }) => (
@@ -48,17 +60,7 @@ export default function Navbar(props) {
                 </div>
                 <div className="flex w-full items-center justify-between md:w-auto">
                   <Link href="/" className="w-28 dark:hidden">
-                    {props.logo ? (
-                      // <Image
-                      // {...urlForImage(props.logo)}
-                      //   alt="Logo"
-                      //   priority={true}
-                      //   sizes="(max-width: 640px) 100vw, 200px"
-                      // />
-                      <p>Rafay</p>
-                    ) : (
-                      <span className="block text-center">Stablo</span>
-                    )}
+                    <p>Rafay</p>
                   </Link>
                   <Link href="/" className="hidden w-28 dark:block">
                     {props.logoalt ? (
@@ -101,28 +103,24 @@ export default function Navbar(props) {
                 <div className="order-2 hidden w-full flex-col items-center justify-start md:order-none md:flex md:w-auto md:flex-1 md:flex-row">
                   {rightmenu.map((item, index) => (
                     <Fragment key={`${item.label}${index}`}>
-                      {item.children && item.children.length > 0 ? (
-                        <DropdownMenu
-                          menu={item}
-                          key={`${item.label}${index}`}
-                          items={item.children}
-                        />
-                      ) : (
-                        <Link
-                          href={item.href}
-                          key={`${item.label}${index}`}
-                          className="px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
-                          target={item.external ? "_blank" : ""}
-                          rel={item.external ? "noopener" : ""}
-                        >
-                          <span> {item.label}</span>
-                          {item.badge && (
-                            <span className="ml-2 rounded bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-600 dark:bg-cyan-200 dark:text-blue-800 ">
-                              {item.badge}
-                            </span>
-                          )}
-                        </Link>
-                      )}
+                      <div
+                        onClick={() =>
+                          item.subpages
+                            ? (toggleMenu(), setSelectedSubpages(item.subpages))
+                            : router.push(item.href)
+                        }
+                        key={`${item.label}${index}`}
+                        className="px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
+                        target={item.external ? "_blank" : ""}
+                        rel={item.external ? "noopener" : ""}
+                      >
+                        <span> {item.label}</span>
+                        {item.badge && (
+                          <span className="ml-2 rounded bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-600 dark:bg-cyan-200 dark:text-blue-800 ">
+                            {item.badge}
+                          </span>
+                        )}
+                      </div>
                     </Fragment>
                   ))}
                 </div>

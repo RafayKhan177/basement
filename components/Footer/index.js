@@ -1,4 +1,4 @@
-import Container from "@/components/container";
+import Container from "components/container";
 import Image from "next/image";
 
 export default function Footer(props) {

@@ -1,4 +1,4 @@
-import Container from "@/components/container";
+import Container from "components/container";
 import Link from "next/link";
 import authors from "./data";
 import Image from "next/image";
