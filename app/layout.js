@@ -1,5 +1,9 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import "@mantine/core/styles.css";
+import { Providers } from "./providers";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,7 +15,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <Providers>
+          <Navbar />
+          <main
+            style={{ width: "98vw", minHeight: "70vh", overflow: "hidden" }}
+          >
+            {children}
+          </main>
+          <Footer />
+        </Providers>
+      </body>
     </html>
   );
 }
