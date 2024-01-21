@@ -1,33 +1,94 @@
-import { Overlay, Container, Title, Button, Text } from "@mantine/core";
-import classes from "./style.module.css";
+"use client";
 
-export function Hero() {
+import { Container } from "@mantine/core";
+import { Image } from "@nextui-org/react";
+import { useEffect, useState } from "react";
+import TextTransition, { presets } from "react-text-transition";
+
+const Hero = () => {
   return (
-    <div className={classes.hero}>
-      <Overlay
-        gradient="linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, .65) 40%)"
-        opacity={1}
-        zIndex={0}
-      />
-      <Container className={classes.container} size="md">
-        <Title className={classes.title} style={{ marginTop: "3rem" }}>
-          A fully featured React components library
-        </Title>
-        <Text className={classes.description} size="xl" mt="xl">
-          Build fully functional accessible web applications faster than ever –
-          Mantine includes more than 120 customizable components and hooks to
-          cover you in any situation
-        </Text>
-
-        <Button
-          variant="gradient"
-          size="xl"
-          radius="xl"
-          className={classes.control}
+    <>
+      <Container size={"lg"} style={{ position: "relative" }}>
+        <Image
+          src="https://img.freepik.com/free-photo/modern-apartment-with-comfortable-sofa-decor-generated-by-ai_188544-38495.jpg?w=996&t=st=1705861306~exp=1705861906~hmac=02fbe24d3e087970245c381f93ed5dab168236eea682814d90a30d16150d8ba8"
+          alt="Hero Image"
+          radius="lg"
+          width="100%"
+          style={{ height: "70vh", objectFit: "cover", margin: "0 auto" }}
+        />
+        <div
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            zIndex: 999,
+            width: "100%",
+          }}
         >
-          Get started
-        </Button>
+          <HeroText />
+        </div>
       </Container>
+    </>
+  );
+};
+
+const HeroText = () => {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const intervalId = setInterval(
+      () => setIndex((index) => index + 1),
+      3000 // every 3 seconds
+    );
+    return () => clearTimeout(intervalId);
+  }, []);
+
+  const heroContent = {
+    title: "Find Your Dream Home ",
+    subtitle: "Explore Stunning Properties in Your Area",
+    dynamicText: (
+      <TextTransition
+        springConfig={presets.wobbly}
+        style={{ fontSize: "1.1rem", fontWeight: 600 }}
+        className="caret-neutral-900"
+      >
+        {
+          [
+            "Imagine stepping into a sunlit living room, Imagine stepping into a sunlit living room, ",
+            "Invest in more than just a property. Invest Invest in more than just a property. Invest ",
+            "Picture yourself hosting backyard barbecues Picture yourself hosting backyard barbecues ",
+          ][index % 3]
+        }
+      </TextTransition>
+    ),
+    buttonText: "Search Properties",
+    placeholderText: "Enter your desired location",
+    tryForFreeText: "",
+  };
+  return (
+    <div
+      style={{ maxWidth: "75vw" }}
+      className=" md:w-1/2  backdrop-blur-sm p-8 rounded-lg ml-10"
+    >
+      <h6 className="mb-4.5 font-medium text-white">{heroContent.title}</h6>
+      <h1
+        className="mb-5 pr-16 text-2xl font-bold text-white xl:text-hero "
+      >
+        {heroContent.subtitle}
+      </h1>
+
+      <h6 className="text-md text-white h-fit">{heroContent.dynamicText}</h6>
+
+      <div className="mt-6">
+        <button
+          aria-label="get started button"
+          className="flex rounded-md font-bold bg-white px-7.5 py-2.5 text-black duration-300 ease-in-out hover:bg-black hover:text-white"
+        >
+          {heroContent.buttonText}
+        </button>
+      </div>
     </div>
   );
-}
+};
+
+export default Hero;

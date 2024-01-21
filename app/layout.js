@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <Navbar />
           <main
-            style={{ width: "98vw", minHeight: "70vh", overflow: "hidden" }}
+            style={{ width: "100%", minHeight: "70vh", overflow: "hidden" }}
           >
             {children}
           </main>

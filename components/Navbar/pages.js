@@ -1,23 +1,22 @@
 const leftmenu = [
   {
-    label: "Home",
-    href: "/",
+    label: "Show Home",
+    href: "/homeredesign",
   },
   {
-    label: "Listings",
-    href: "/blogs",
+    label: "Projects",
+    href: "/projects",
   },
   {
-    label: "Archive",
+    label: "Services",
     href: "/archive",
   },
 ];
 
 const rightmenu = [
   {
-    label: "Download",
-    href: "https://web3templates.com/templates/stablo-minimal-blog-website-template",
-    external: true,
+    label: "Portfolio",
+    href: "/portfolio",
   },
   {
     label: "Contact",
