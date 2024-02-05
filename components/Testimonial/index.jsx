@@ -76,6 +76,8 @@ const Testimonial = () => {
               {testimonialData.map((review) => (
                 <SwiperSlide key={review?.id}>
                   <SingleTestimonial review={review} />
+                  <br />
+                  <br />
                 </SwiperSlide>
               ))}
             </Swiper>

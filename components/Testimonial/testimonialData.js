@@ -11,7 +11,7 @@ const testimonialData = [
     name: "Sophie Turner",
     designation: "Director @Baig Associates",
     content:
-      "Baig Associates doesn't just build houses; they create homes that are comfy and stylish. I, being British, was impressed by how well they understand both Pakistani and British styles. The whole process, from talking about it to buying, was easy and clear. Their dedication to doing great work makes them stand out in real estate.",
+      "Baig Associates doesn't just build houses; they create homes that are comfy and stylish. I, being British, was impressed by how well they understand both Pakistani and British styles. The whole process, from talking about it to buying, was easy and clear. ",
   },
   {
     id: 3,

@@ -105,7 +105,7 @@ export default function Navbar(props) {
                     <Fragment key={`${item.label}${index}`}>
                       <div
                         onClick={() =>
-                          item.subpages
+                          item?.subpages
                             ? (toggleMenu(), setSelectedSubpages({ subpages: item.subpages, label: item.label }))
                             : router.push(item.href)
                         }
@@ -136,16 +136,27 @@ export default function Navbar(props) {
                           items={item.children}
                           mobile={true}
                         />
-                      ) : (
-                        <Link
-                          href={item.href}
+                        ) : (
+                          <Fragment key={`${item.label}${index}`}>
+                        <div
+                          onClick={() =>
+                            item?.subpages
+                            ? (toggleMenu(), setSelectedSubpages({ subpages: item.subpages, label: item.label }))
+                            : router.push(item.href)
+                          }
                           key={`${item.label}${index}`}
                           className="w-full px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
                           target={item.external ? "_blank" : ""}
                           rel={item.external ? "noopener" : ""}
                         >
-                          {item.label}
-                        </Link>
+                          <span> {item.label}</span>
+                          {item.badge && (
+                            <span className="ml-2 rounded bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-600 dark:bg-cyan-200 dark:text-blue-800 ">
+                              {item.badge}
+                            </span>
+                          )}
+                        </div>
+                      </Fragment>
                       )}
                     </Fragment>
                   ))}

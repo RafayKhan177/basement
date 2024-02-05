@@ -37,7 +37,7 @@ export function SingleCard({ item }) {
             radius="lg"
             width="100%"
             alt={item.title}
-            className="w-full object-cover h-72 transition-transform transform hover:scale-110"
+            className="w-full object-cover h-72 transition-transform transform hover:scale-90"
             src={item.img}
           />
         </CardBody>
