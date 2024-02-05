@@ -59,8 +59,8 @@ export default function Navbar(props) {
                   ))}
                 </div>
                 <div className="flex w-full items-center justify-between md:w-auto">
-                  <Link href="/" className="w-28 dark:hidden">
-                    <p>Rafay</p>
+                  <Link href="/" className="w-28 dark:hidden rounded-md align-middle justify-center flex">
+                    <p>RAFAY</p>
                   </Link>
                   <Link href="/" className="hidden w-28 dark:block">
                     {props.logoalt ? (
@@ -106,7 +106,7 @@ export default function Navbar(props) {
                       <div
                         onClick={() =>
                           item.subpages
-                            ? (toggleMenu(), setSelectedSubpages(item.subpages))
+                            ? (toggleMenu(), setSelectedSubpages({ subpages: item.subpages, label: item.label }))
                             : router.push(item.href)
                         }
                         key={`${item.label}${index}`}

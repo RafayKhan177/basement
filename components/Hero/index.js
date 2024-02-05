@@ -2,6 +2,7 @@
 
 import { Container } from "@mantine/core";
 import { Image } from "@nextui-org/react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import TextTransition, { presets } from "react-text-transition";
 
@@ -61,9 +62,8 @@ const HeroText = () => {
         }
       </TextTransition>
     ),
-    buttonText: "Search Properties",
-    placeholderText: "Enter your desired location",
-    tryForFreeText: "",
+    buttonText: "Our Showhome",
+    buttonLink:"/homeredesign"
   };
   return (
     <div
@@ -80,12 +80,14 @@ const HeroText = () => {
       <h6 className="text-md text-white h-fit">{heroContent.dynamicText}</h6>
 
       <div className="mt-6">
+        <Link href={heroContent.buttonLink}>
         <button
           aria-label="get started button"
           className="flex rounded-md font-bold bg-white px-7.5 py-2.5 text-black duration-300 ease-in-out hover:bg-black hover:text-white"
-        >
+          >
           {heroContent.buttonText}
         </button>
+          </Link>
       </div>
     </div>
   );
