@@ -1,10 +1,12 @@
 "use client"
 
 import SectionHeader from "../common/SectionHeader";
-import featuresData from "./servicesData";
+import ServiceData from "./servicesData";
 import SingleFeature from "./SingleFeature";
 
-const Services = () => {
+const Services = ({all}) => {
+  const sliceServiceData = all ? ServiceData : ServiceData.slice(0, 3);
+  
   return (
     <>
       {/* <!-- ===== Features Start ===== --> */}
@@ -24,7 +26,7 @@ const Services = () => {
           <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-12.5">
             {/* <!-- Features item Start --> */}
 
-            {featuresData.map((feature, key) => (
+            {sliceServiceData.map((feature, key) => (
               <SingleFeature feature={feature} key={key} />
             ))}
             {/* <!-- Features item End --> */}

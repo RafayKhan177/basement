@@ -2,6 +2,7 @@ import Hero from "components/Hero";
 import Testimonial from "components/Testimonial";
 import GetInspired from "components/GetInspired"
 import BlogsListing from "components/BlogsListing";
+import Services from "components/Services";
 
 export default function Page() {
   return (
@@ -10,6 +11,7 @@ export default function Page() {
       <GetInspired />
       <BlogsListing />
       <Testimonial />
+      <Services />
     </>
   );
 }

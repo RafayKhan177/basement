@@ -1,41 +1,87 @@
+import {
+  FaHome,
+  FaHammer,
+  FaPlus,
+  FaUtensils,
+  FaTree,
+  FaBuilding,
+  FaCouch,
+  FaBath,
+  FaTools,
+  FaSearch,
+} from "react-icons/fa";
 
-const featuresData= [
+const ServiceData = [
   {
-    id: 1,
-    image:
-      "https://img.freepik.com/free-photo/analog-landscape-city-with-buildings_23-2149661456.jpg?w=826&t=st=1704985239~exp=1704985839~hmac=74452d5332a4fe1cf6aa2386d11e0e2dfb8973b0ccf904ab6874258be148b31d",
-    href: "Services/Residential-Architechture",
-    icon: "/images/icon/icon-01.svg",
-    title: "RESIDENTIAL ARCHITECTURE",
-    description:
-      "Embark on a captivating exploration into the realm of artistic brilliance with our Residential Architecture services. Imagine a world where spaces aren't merely designed; they're transformed into personalized sanctuaries, reflecting the very essence of modern living standards. Our expert architects, armed with creativity and precision, don't just draw up plans; they weave visionary expressions that encapsulate lifestyle preferences, mood dynamics, and even behavioral patterns. Dive deep into a global panorama of architectural excellence as our services reach clients around the world. Whether you're nestled in the bustling urban jungles or amidst serene landscapes, our commitment to crafting sustainable environments is unwavering. It's not just about building structures; it's about creating living spaces that harmonize with the environment, promoting a balance between aesthetic appeal and ecological responsibility. Picture this as more than a service; it's an immersive journey where architecture seamlessly intertwines with individuality. Each blueprint is a canvas, and every structure is a testament to the unique story of its inhabitants. We don't just design; we curate experiences, ensuring that every corner of your abode resonates with your personal narrative. So, are you ready to transcend the conventional boundaries of architectural services? Join us on this odyssey where innovation meets tradition, and the ordinary transforms into the extraordinary. Immerse yourself in a world where architecture becomes a celebration of individuality. Welcome to a space where your dream sanctuary comes to life. 🌐🏡✨",
-    subtitle:
-      "Discover a world of artistic brilliance with our Residential Architecture services. Our expert architects transform spaces into personalized sanctuaries mirroring modern living standards. Architectural plans are visionary expressions of lifestyle, mood, and behavior. Serving clients globally, our commitment to creating sustainable environments is unwavering. Immerse yourself in a journey where architecture meets individuality.",
+    name: "Home Design",
+    icon: <FaHome />,
+    href: "/services/home-design",
+    details:
+      "Sure, we’re Alberta’s most awarded renovator, and we’re proud of it. But did you consider that behind every renovation is a jaw-dropping design concept? Carefully planned by our team of in-house architectural technologists and interior designers, we get every detail of your house design in Calgary in place before we start construction. At Ultimate, we place great emphasis on the planning and design phase, which in turn, creates a smooth renovation process for you and an exceptional result. If you’re looking for a custom home design in Calgary, our residential architects are here to help.",
   },
   {
-    id: 2,
-    image:
-      "https://img.freepik.com/premium-photo/innovative-architecture-civil-engineering-plan_31965-16212.jpg?w=826",
-    href: "Services/Online-Construction",
-    icon: "/images/icon/icon-02.svg",
-    title: "ONLINE CONSTRUCTION",
-    description:
-      "Sit back and relax as we take the reins of property management into our capable hands, no matter where you are in the world. Distance is no hurdle for us; we specialize in crafting seamless experiences for property owners, both near and far. Your location won't be a barrier because, with us, your property is in expert care. Picture this: You might be thousands of miles away, but we bridge the gap effortlessly. We handle all aspects of property management, ensuring that you stay connected with us through the digital thread. From overseeing maintenance tasks to handling tenant relations, we've got it all covered. Our commitment extends beyond geographical boundaries. We bring your property into the digital realm, keeping you in the loop with real-time updates, digital documentation, and a virtual presence that transcends distances. You're not just a property owner; you're a part of our digital family. So, whether you're sipping coffee in your hometown or exploring distant landscapes, your property is in capable hands. Let us handle the intricacies while you enjoy the convenience of a digital partnership. Your property journey begins here, transcending borders and embracing the digital future of real estate management. 🏠💻✨",
-    subtitle:
-      "No matter where you are in the world. Distance is no hurdle for us  Let us handle the intricacies while you enjoy the convenience of a digital partnership. ",
+    name: "Complete Home Renovations",
+    icon: <FaHammer />,
+    href: "/services/complete-home-renovations",
+    details:
+      "We meet many homeowners who are waffling between a complete home renovation in Calgary and buying a new house. At Ultimate, we recognize that a house is so much more than four walls and a roof. What makes a house into a home are the experiences that take place within the walls. So, whether it’s the memories you can’t forget, or you’ve been blessed with a fantastic location, extensive remodelling can satisfy your desire for an upgrade while simultaneously allowing you to keep everything you’ve loved about your house for so long.",
   },
   {
-    id: 3,
-    image:
-      "https://img.freepik.com/free-photo/medium-shot-men-discussing-job_23-2149426483.jpg?w=826&t=st=1704985401~exp=1704986001~hmac=a6d47600be0b2fff00f38697356cc06e2a26743dbbe920e8fc4456043a76e64c",
-    href: "Services/Construction",
-    icon: "/images/icon/icon-03.svg",
-    title: "CONSTRUCTION PARTNERS",
-    description:
-      "Imagine your dream property precisely where you envision it. At our service, we're not just about finding a location; we're about crafting your ideal haven in your desired spot. Picture this: every intricate detail tailored to your desires. Our commitment goes beyond just constructing structures. We provide you with a comprehensive package — from the smallest design element to the grandest architectural vision. And guess what? We throw in a bonus: free consultation. Yes, you read that right. Our experts are ready to guide you through every step, offering insights and expertise without any cost. Let's talk meetings. Whether you prefer a face-to-face discussion or a virtual rendezvous, we've got both covered. Picture walking through your dream property in a physical meeting or exploring the blueprint in the comfort of your space during an online session. It's not just about the destination; it's about the journey, and we're with you every step of the way. Your dream property isn't just a project for us; it's a shared vision. From the location details to the aesthetics, we're here to transform your aspirations into reality. So, let's embark on this journey together, where every detail is meticulously crafted to reflect your desires. Your dream location is just a consultation away. 🏡💬✨",
-    subtitle:
-      "Our Construction services redefine the boundaries of creativity and precision. Recognizing the need for personalization in residential projects and the scale of demands in commercial ventures, we blend essential elements of perfect construction. With an unwavering commitment to utilizing available resources for perfect proportions and sweeping angles.",
+    name: "Home Additions",
+    icon: <FaPlus />,
+    href: "/services/home-additions",
+    details:
+      "We’re here to help you realize your home’s full potential with a home addition in Calgary. Ready to bump out your kitchen? Expand your master retreat? Add a home office, hobby room, or extra garage bay? We can help with that! As Calgary’s favourite renovator, we’re no stranger to tackling complicated renovation projects like home additions. In fact, they’re one of our favourite jobs to complete. So whether you just can’t part with your friendly neighbours, your lot, your community, or the home itself, fear not! We’re here to adapt and add to your current space to make it your dream home.",
+  },
+  {
+    name: "Kitchen Renovations",
+    icon: <FaUtensils />,
+    href: "/services/kitchen-renovations",
+    details:
+      "Fall in love with your kitchen. Whether you want to improve the functionality or transform the aesthetics, your kitchen renovation in Calgary could include upgrading appliances, flooring, sinks, countertops, tile, lighting, backsplash, and cabinets. One of the best-kept secrets of our company is our in-house team of cabinet manufacturers. With our in-house manufacturing facility and design team, we take pride in providing turnkey design and building solutions. We solve issues related to size, space and style for all custom kitchen renovations in Calgary.",
+  },
+  {
+    name: "Outdoor Living Spaces",
+    icon: <FaTree />,
+    href: "/services/outdoor-living-spaces",
+    details:
+      "Ultimate Renovations is the top provider of outdoor living spaces and exterior renovations in Calgary. While most home renovation companies in Calgary offer siding and roofing repairs, window installations, and even deck and fence building, we are the only ones that specialize in extending your living space to your own backyard. In Calgary, we experience essentially 2 seasons. In the summer, your patio serves as the hub for entertaining, visiting, relaxing, and even cooking, but it doesn’t have to stand ignored all winter long. Talk to us about the options for outdoor heaters, panoramic patio doors, and other comfort applications.",
+  },
+  {
+    name: "Exterior Renovations",
+    icon: <FaBuilding />,
+    href: "/services/exterior-renovations",
+    details:
+      "In 1979, Ultimate was founded as a window cladding company. At the time, window cladding was a niche market with tons of demand. A few years later after a massive hailstorm struck Southern Alberta, our focus shifted to siding and roofing repair. Since then, we have become a highly recognized home renovation company in Calgary, but we hold fast to our roots. To this day, we offer roof replacements, siding repairs, window and door installations, framing, masonry, deck building, soffit, fascia, and gutter repair, and outdoor living spaces in Calgary. Our exterior renovations encompass everything from improving curb appeal to adding privacy and function.",
+  },
+  {
+    name: "Basement Development",
+    icon: <FaCouch />,
+    href: "/services/basement-development",
+    details:
+      "We love doing basement developments in Calgary because it’s a chance for us to take a completely blank canvas and shape it into something new, fun, beautiful, and useful! Based on your needs and lifestyle, we can transform the space into an art studio, gym, home theatre, or games area, and ensure that it becomes your favourite room in the house. Unlike other home renovation companies in Calgary, we can even add a lower level to homes that don’t have one or maximize the amount of usable space by changing the layout or removing awkward posts and beams. As with our bathroom and kitchen renovations, we guarantee the type of quality you would expect in a new home build.",
+  },
+  {
+    name: "Bathroom Renovations",
+    icon: <FaBath />,
+    href: "/services/bathroom-renovations",
+    details:
+      "A bathroom should be a relaxing escape & a place of tranquillity. Bathroom renovations are becoming more and more important for homeowners and interested buyers, in Calgary. To transform your space into a truly spa-like experience, our talented in-house design team and custom cabinet builders work together to create a cohesive space that stands out as an oasis in your home.",
+  },
+  {
+    name: "Custom Home Builds",
+    icon: <FaTools />,
+    href: "/services/custom-home-builds",
+    details:
+      "A bathroom should be a relaxing escape & a place of tranquillity. Bathroom renovations are becoming more and more important for homeowners and interested buyers, in Calgary. To transform your space into a truly spa-like experience, our talented in-house design team and custom cabinet builders work together to create a cohesive space that stands out as an oasis in your home.",
+  },
+  {
+    name: "Renovation Previews",
+    icon: <FaSearch />,
+    href: "/services/renovation-previews",
+    details:
+      "So you’re on the hunt for a fixer-upper, but if you’ve seen the show (or any show on HGTV, for that matter), you know there might be more to consider than meets the eye. Here in Calgary, we’re offering some free expert advice on choosing the right property to invest in before signing on the dotted line. Why? Because we care. We want renovations to be a fun, low-stress experience for everyone. If we can help you understand the property, possibilities, and costs going into your next home purchase, you’ll feel a lot more confident about your decision. The thing is, it’s not always easy to spot the issues or think outside the box, which is where we come in. So give us a call, and let’s go house shopping!",
   },
 ];
 
-export default featuresData;
+export default ServiceData;
