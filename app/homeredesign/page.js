@@ -1,92 +1,52 @@
-"use client"
-import { Container } from '@mantine/core';
-import React from 'react';
-import ReactBeforeSliderComponent from 'react-before-after-slider-component';
-import 'react-before-after-slider-component/dist/build.css';
-import { Tabs, Tab, Card, CardBody } from "@nextui-org/react";
-import GetInspired from "components/GetInspired"
-import SectionHeader from 'components/common/SectionHeader';
-import BookShowing from 'components/BookShowing';
-
-const BASEMENT_AFTER_IMAGE = {
-  imageUrl: 'https://github.com/RafayKhan177/Raw-Images/blob/main/camparisn/basement/showroom-basement-after.jpg?raw=true'
-};
-
-const BASEMENT_BEFORE_IMAGE = {
-  imageUrl: 'https://github.com/RafayKhan177/Raw-Images/blob/main/camparisn/basement/showroom-basement-before.jpg?raw=true'
-};
-
-const HOUSE_AFTER_IMAGE = {
-  imageUrl: 'https://github.com/RafayKhan177/Raw-Images/blob/main/camparisn/house/showroom-complete-house-after.jpg?raw=true'
-};
-
-const HOUSE_BEFORE_IMAGE = {
-  imageUrl: 'https://github.com/RafayKhan177/Raw-Images/blob/main/camparisn/house/showroom-complete-house-before.jpg?raw=true'
-};
-
-const OUTDOOR_AFTER_IMAGE = {
-  imageUrl: 'https://github.com/RafayKhan177/Raw-Images/blob/main/camparisn/outdoor/showroom-outdoor-living-after.jpg?raw=true'
-};
-
-const OUTDOOR_BEFORE_IMAGE = {
-  imageUrl: 'https://github.com/RafayKhan177/Raw-Images/blob/main/camparisn/outdoor/showroom-outdoor-living-before.jpg?raw=true'
-};
+import { Container, Image } from "@mantine/core";
+import { Button } from "@nextui-org/react";
+import Comparison from "components/Comparison";
+import Link from "next/link";
 
 export default function Page() {
   return (
     <>
-      <Container size={'lg'}>
-        <SectionHeader
-
-
-          headerInfo={{
-            title: 'Enhance Your Comparison Experience',
-            subtitle: 'Discover the changes before/after',
-            description: 'Whether its a basement renovation, a complete house makeover, or outdoor living space improvements, we have got you covered!',
-          }}
-
-        />
-
-        <Tabs aria-label="Options">
-          <Tab key="photos" title="Basement">
-            <Card>
-              <CardBody>
-                <ReactBeforeSliderComponent
-                  className='overflow-hidden'
-                  firstImage={BASEMENT_AFTER_IMAGE}
-                  secondImage={BASEMENT_BEFORE_IMAGE}
-                />
-              </CardBody>
-            </Card>
-          </Tab>
-          <Tab key="music" title="House">
-            <Card>
-              <CardBody>
-                <ReactBeforeSliderComponent
-                  className='overflow-hidden'
-
-                  firstImage={HOUSE_AFTER_IMAGE}
-                  secondImage={HOUSE_BEFORE_IMAGE}
-                />
-              </CardBody>
-            </Card>
-          </Tab>
-          <Tab key="videos" title="Outdoor">
-            <Card>
-              <CardBody>
-                <ReactBeforeSliderComponent
-                  className='overflow-hidden'
-                  firstImage={OUTDOOR_AFTER_IMAGE}
-                  secondImage={OUTDOOR_BEFORE_IMAGE}
-                />
-              </CardBody>
-            </Card>
-          </Tab>
-        </Tabs>
-
-        <BookShowing />
-      </Container>
-      <GetInspired /></>
-
+      <section className="w-full">
+        <div className="relative">
+          <Image
+            src="https://images.unsplash.com/photo-1505691723518-36a5ac3be353?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            alt="Home"
+            className="rounded-none max-h-[70vh] w-screen object-cover"
+            style={{ zIndex: -99 }}
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
+            <h1 className="text-white text-4xl font-bold mb-4">Our Showhome</h1>
+            <Link href={"/contact"}>
+              <Button color="warning" variant="shadow">
+                Book A Showing
+              </Button>
+            </Link>
+          </div>
+        </div>
+        <Container
+          className="my-10 rounded-md p-2 bg-gradient-to-br bg-slate-200 "
+          size={"lg"}
+        >
+          <div className="my-4 w-full rounded-md text-center ">
+            <h1 className="text-4xl font-bold">Showhome Hours</h1>
+            <p className="text-lg font-semibold mb-4">Sunday to Saturday</p>
+            <p className="mb-4">By Appointment Only</p>
+            <div className="flex justify-center">
+              <Button color="success" variant="flat" className="mx-2">
+                Get Directions
+              </Button>
+              <Link href={"#Comparison"}>
+                <Button color="success" variant="solid" className="mx-2">
+                  Learn More
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </Container>
+      </section>
+      <div id="Comparison">
+        <Comparison />
+      </div>
+    </>
   );
 }
