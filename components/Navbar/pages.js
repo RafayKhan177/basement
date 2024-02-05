@@ -47,7 +47,7 @@ const rightmenu = [
     subpages: [
       { name: "Our Process", href: "/about/our-process" },
       { name: "Our Story", href: "/about/our-story" },
-      { name: "Our Team", href: "/about/our-team" },
+      // { name: "Our Team", href: "/about/our-team" },
       { name: "Careers", href: "/about/careers" },
     ],
   },

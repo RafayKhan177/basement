@@ -31,15 +31,15 @@ const SingleFeature = ({ feature }) => {
         whileInView="visible"
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="animate_top z-40 rounded-lg border border-white bg-[#c97943] p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
+        className="animate_top z-40 rounded-lg border border-white bg-[#6f1d1b] p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-12.5"
       >
-        <div className="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-[#7c4a29] text-white text-4xl">
+        <div className="relative flex h-16 w-16 items-center justify-center rounded-[4px] bg-[#49111c] text-white text-4xl">
           {icon}
         </div>
         <h3 className="mb-5 mt-7.5 text-xl font-semibold text-white xl:text-itemtitle">
           {title}
         </h3>
-        <p className="text-white h-[15rem]">{truncateText(details, 350)}</p>
+        <p className="text-white h-[15rem]">{truncateText(details, 320)}</p>
         <br />
         <Link href={href}>
           <Button bg={"#fff"} c={"#000"}>

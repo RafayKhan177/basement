@@ -9,11 +9,11 @@ import TextTransition, { presets } from "react-text-transition";
 const Hero = () => {
   return (
     <>
-      <Container size={"lg"} style={{ position: "relative" }}>
+      <section  style={{ position: "relative" }}>
         <Image
           src="https://img.freepik.com/free-photo/modern-apartment-with-comfortable-sofa-decor-generated-by-ai_188544-38495.jpg?w=996&t=st=1705861306~exp=1705861906~hmac=02fbe24d3e087970245c381f93ed5dab168236eea682814d90a30d16150d8ba8"
           alt="Hero Image"
-          radius="lg"
+          radius="none"
           width="100%"
           style={{ height: "70vh", objectFit: "cover", margin: "0 auto",zIndex:1 }}
         />
@@ -29,7 +29,7 @@ const Hero = () => {
         >
           <HeroText />
         </div>
-      </Container>
+      </section>
     </>
   );
 };

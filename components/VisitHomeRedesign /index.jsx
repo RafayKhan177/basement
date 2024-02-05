@@ -2,7 +2,7 @@ import { Card, Overlay, Button, Text, Container } from "@mantine/core";
 import classes from "./style.module.css";
 import Link from "next/link";
 
-export default function BookShowing() {
+export default function VisitHomeRedesign() {
   return (
     <Container size={"lg"}>
       <Card radius="md" className={classes.card}>
@@ -10,22 +10,22 @@ export default function BookShowing() {
 
         <div className={classes.content}>
           <Text size="lg" fw={700} className={classes.title}>
-            Experience Ultimate Renovations
+            Visit Our Showhome
           </Text>
 
-          <Text size="sm" className={classes.description}>
+          {/* <Text size="sm" className={classes.description}>
             Step into our exquisite showhome and unlock a world of inspiration
             for your dream abode.
-          </Text>
+          </Text> */}
 
-          <Link href={"/contact"}>
+          <Link href={"/homeredesign"}>
             <Button
               className={classes.action}
               variant="white"
               color="dark"
-              size="xs"
+              size="lg"
             >
-              Book A Showing
+              Learn More
             </Button>
           </Link>
         </div>

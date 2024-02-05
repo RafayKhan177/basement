@@ -8,8 +8,8 @@ const SingleTestimonial = ({ review }) => {
 
   return (
     <div
-      style={{ backgroundColor: "#cc7c47" }}
-      className="rounded-lg bg-[#cc7c47] p-9 pt-7.5 shadow-solid-9 dark:border"
+      style={{ backgroundColor: "#6f1d1b" }}
+      className="rounded-lg bg-[#6f1d1b] p-9 pt-7.5 shadow-solid-9 dark:border"
     >
       <div className="mb-7.5 flex justify-between border-b border-stroke pb-6">
         <div>

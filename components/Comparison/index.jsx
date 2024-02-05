@@ -86,10 +86,7 @@ export default function Comparison() {
             </Card>
           </Tab>
         </Tabs>
-
-        <BookShowing />
       </Container>
-      <GetInspired />
     </>
   );
 }

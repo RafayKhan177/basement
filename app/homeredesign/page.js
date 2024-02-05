@@ -1,7 +1,9 @@
 import { Container, Image } from "@mantine/core";
-import { Button } from "@nextui-org/react";
+import BookShowing from "components/BookShowing";
+import GetInspired from "components/GetInspired";
 import Comparison from "components/Comparison";
 import Link from "next/link";
+import { Button } from "@nextui-org/react";
 
 export default function Page() {
   return (
@@ -46,7 +48,9 @@ export default function Page() {
       </section>
       <div id="Comparison">
         <Comparison />
+        <GetInspired />
       </div>
+      <BookShowing />
     </>
   );
 }

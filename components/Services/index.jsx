@@ -1,5 +1,6 @@
 "use client"
 
+import { Container } from "@mantine/core";
 import SectionHeader from "../common/SectionHeader";
 import ServiceData from "./servicesData";
 import SingleFeature from "./SingleFeature";
@@ -10,8 +11,8 @@ const Services = ({all}) => {
   return (
     <>
       {/* <!-- ===== Features Start ===== --> */}
-      <section id="features" className="py-20 lg:py-25 xl:py-30">
-        <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
+      <Container size={"lg"} id="services">
+        <div>
           {/* <!-- Section Title Start --> */}
           <SectionHeader
             headerInfo={{
@@ -32,7 +33,7 @@ const Services = ({all}) => {
             {/* <!-- Features item End --> */}
           </div>
         </div>
-      </section>
+      </Container>
 
       {/* <!-- ===== Features End ===== --> */}
     </>

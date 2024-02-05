@@ -5,7 +5,7 @@ import Link from "next/link";
 const GetInspired = () => {
   return (
     <Container size={"lg"}>
-      <div className="bg-white py-24 sm:py-32 w-full">
+      <div className="bg-white py-6 w-full">
         <div className="">
           <div className=" grid grid-cols-1 items-start gap-x-8 gap-y-16 sm:gap-y-24 lg:mx-0  lg:grid-cols-2">
             <div className="lg:pr-4">
@@ -21,7 +21,7 @@ const GetInspired = () => {
                   aria-hidden="true"
                 >
                   <div
-                    className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#cc7c47] to-[#ceb99c] opacity-40"
+                    className="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#6f1d1b] to-[#ceb99c] opacity-40"
                     style={{
                       clipPath:
                         "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
@@ -62,10 +62,10 @@ const GetInspired = () => {
             </div>
             <div>
               <div className="text-base leading-7 text-gray-700 ">
-                <p className="text-base font-semibold leading-7 text-[#cc7c47]">
+                <p className="text-base font-semibold leading-7 text-[#6f1d1b]">
                   wisdom values
                 </p>
-                <h1 className="mt-2 text-3xl font-bold tracking-tight text-[#cc7c47] sm:text-4xl">
+                <h1 className="mt-2 text-3xl font-bold tracking-tight text-[#6f1d1b] sm:text-4xl">
                   Get Inspired
                 </h1>
                 <div className="max-w-xl">
@@ -112,7 +112,7 @@ const GetInspired = () => {
               <div className="mt-10 flex">
                 <Link
                   href="/about/our-story"
-                  className="text-base font-semibold leading-7 text-[#cc7c47]"
+                  className="text-base font-semibold leading-7 text-[#6f1d1b]"
                 >
                   Learn more about our company{" "}
                   <span aria-hidden="true">&rarr;</span>
