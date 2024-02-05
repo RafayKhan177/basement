@@ -11,24 +11,20 @@ import { motion } from "framer-motion";
 import testimonialData from "./testimonialData";
 import SingleTestimonial from "./SingleTestimonial";
 import SectionHeader from "../common/SectionHeader";
+import { Container } from "@mantine/core";
 
 const Testimonial = () => {
   return (
     <>
-      <section>
-        <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
-          {/* <!-- Section Title Start --> */}
-          <div className="animate_top mx-auto text-center">
-            <SectionHeader
-              headerInfo={{
-                title: `WHAT OUR CLIENTS SAY`,
-                subtitle: `Reviews from Our Happy Homeowners`,
-                description: `Discover why people love working with Baig Associates. Read what our clients have to say about their home buying experience.`,
-              }}
-            />
-          </div>
-          {/* <!-- Section Title End --> */}
-        </div>
+      <Container size={"lg"}>
+        <SectionHeader
+          headerInfo={{
+            title: "OUR REVIEWS",
+            subtitle: "Testimonials from Satisfied Customers",
+            description:
+              "Discover what homeowners have to say about their experience with [Company Name]. Read our reviews to learn why people choose us for their home improvement needs.",
+          }}
+        />
 
         <motion.div
           variants={{
@@ -46,7 +42,7 @@ const Testimonial = () => {
           whileInView="visible"
           transition={{ duration: 1, delay: 0.1 }}
           viewport={{ once: true }}
-          className="animate_top mx-auto mt-15 max-w-c-1235 px-4 md:px-8 xl:mt-20 xl:px-0"
+          className="animate_top  mt-15  xl:mt-20 "
         >
           {/* <!-- Slider main container --> */}
           <div className="swiper testimonial-01 mb-20 pb-22.5">
@@ -83,7 +79,7 @@ const Testimonial = () => {
             </Swiper>
           </div>
         </motion.div>
-      </section>
+      </Container>
     </>
   );
 };

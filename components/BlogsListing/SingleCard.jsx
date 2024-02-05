@@ -29,7 +29,7 @@ export function SingleCard({ item }) {
         className="w-full max-w-96 mx-auto"
         shadow="lg"
         isPressable
-        onPress={() => navigate.push(`blogs/${item.id}`)}
+        onPress={() => navigate.push(`projects/${item.id}`)}
       >
         <CardBody className="overflow-visible p-0">
           <Image
@@ -37,7 +37,7 @@ export function SingleCard({ item }) {
             radius="lg"
             width="100%"
             alt={item.title}
-            className="w-full object-cover h-72 transition-transform transform hover:scale-90"
+            className="w-full object-cover h-72 transition-transform transform hover:scale-x-105"
             src={item.img}
           />
         </CardBody>

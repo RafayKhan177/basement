@@ -130,7 +130,7 @@ const Footer = () => {
                   className="animate_top"
                 >
                   <h4 className="mb-9 text-itemtitle2 font-medium dark:text-white">
-                    Support
+                    About
                   </h4>
 
                   <ul>
