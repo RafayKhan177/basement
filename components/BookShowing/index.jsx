@@ -18,7 +18,7 @@ export default function BookShowing() {
             for your dream abode.
           </Text>
 
-          <Link href={"/contact"}>
+          <Link href={"/contact#msg"}>
             <Button
               className={classes.action}
               variant="white"

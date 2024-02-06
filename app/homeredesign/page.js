@@ -25,30 +25,24 @@ export default function Page() {
             </Link>
           </div>
         </div>
-        <Container
-          className="my-10 rounded-md p-2 bg-gradient-to-br bg-slate-200 "
-          size={"lg"}
-        >
-          <div className="my-4 w-full rounded-md text-center ">
-            <h1 className="text-4xl font-bold">Showhome Hours</h1>
-            <p className="text-lg font-semibold mb-4">Sunday to Saturday</p>
-            <p className="mb-4">By Appointment Only</p>
-            <div className="flex justify-center">
-              <Button color="success" variant="flat" className="mx-2">
-                Get Directions
+        <div className="my-4 w-full rounded-md text-center px-2 py-8 bg-gradient-to-br bg-slate-200 ">
+          <h1 className="text-4xl font-bold">Showhome Hours</h1>
+          <p className="text-lg font-semibold mb-4">Sunday to Saturday</p>
+          <p className="mb-4">By Appointment Only</p>
+          <div className="flex justify-center">
+            <Button color="success" variant="flat" className="mx-2">
+              Get Directions
+            </Button>
+            <Link href={"#Comparison"}>
+              <Button color="success" variant="solid" className="mx-2">
+                Learn More
               </Button>
-              <Link href={"#Comparison"}>
-                <Button color="success" variant="solid" className="mx-2">
-                  Learn More
-                </Button>
-              </Link>
-            </div>
+            </Link>
           </div>
-        </Container>
+        </div>
       </section>
       <div id="Comparison">
         <Comparison />
-        <GetInspired />
       </div>
       <BookShowing />
     </>

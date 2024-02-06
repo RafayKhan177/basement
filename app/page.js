@@ -12,11 +12,10 @@ export default function Page() {
       <Hero />
       <br />
       <br />
-      <br />s
+      <br />
       <GetInspired />
       <BlogsListing />
       <Comparison />
-      <GetInspired />
       <Testimonial />
       <BookShowing />
       <Services />

@@ -8,8 +8,8 @@ const leftmenu = [
     href: "/projects",
   },
   {
-    label: "Portfolio",
-    href: "/portfolio",
+    label: "Blogs",
+    href: "/blogs",
   },
 ];
 
@@ -47,8 +47,8 @@ const rightmenu = [
     subpages: [
       { name: "Our Process", href: "/about/our-process" },
       { name: "Our Story", href: "/about/our-story" },
-      // { name: "Our Team", href: "/about/our-team" },
-      { name: "Careers", href: "/about/careers" },
+      { name: "Projects", href: "/projects" },
+      { name: "Blogs", href: "/blogs" },
     ],
   },
 ];

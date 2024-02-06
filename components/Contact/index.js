@@ -34,7 +34,7 @@ const Contact = () => {
               fill
             />
           </div>
-
+          <br id="msg" />
           <div className="flex flex-col-reverse flex-wrap gap-8 md:flex-row md:flex-nowrap md:justify-between xl:gap-20">
             <motion.div
               variants={{
