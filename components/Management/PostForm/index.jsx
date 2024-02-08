@@ -2,13 +2,12 @@
 
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
-import { formats, modules, categoryOptions } from "./FormModules"; // Assuming these are custom modules and formats for the editor
-import "react-quill/dist/quill.snow.css";
+import { formats, modules, categoryOptions } from "./FormModules";
 import { Autocomplete, AutocompleteItem, Input } from "@nextui-org/react";
+import "react-quill/dist/quill.snow.css";
 
-// Dynamically import Editor component
 const Editor = dynamic(() => import("react-quill"), {
-  ssr: false, // Disable server-side rendering
+  ssr: false,
 });
 
 export default function PostForm({ handleSave, props }) {
@@ -18,7 +17,7 @@ export default function PostForm({ handleSave, props }) {
     title: props?.title || "",
     subtitle: props?.subtitle || "",
     imageUrl: props?.imageUrl || "",
-    category: props?.category || "Other", // Default category
+    category: props?.category || "BLOG", // Default category
   });
 
   const handleEditorChange = (text) => {

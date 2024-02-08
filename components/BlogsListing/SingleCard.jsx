@@ -38,12 +38,11 @@ export function SingleCard({ item }) {
             width="100%"
             alt={item.title}
             className="w-full object-cover h-72 transition-transform transform hover:scale-x-105"
-            src={item.img}
+            src={item.imageUrl}
           />
         </CardBody>
         <CardFooter className="text-small justify-between mt-2">
           <b>{item.title}</b>
-          <p className="text-default-500">{item.price}</p>
         </CardFooter>
       </Card>
     </motion.div>

@@ -39,7 +39,7 @@ const formats = [
     'video',
 ]
 
-const categoryOptions = ["PROJECTS", "LAWS & TAXES", "CONSTRUCTION", "LIFESTYLE", "HOME DECOR", "TOURISM", "AREA GUIDES", "ZAMEEN PRODUCT UPDATES", "TEAM"];
+const categoryOptions = ["PROJECTS", "BLOG"];
 
 
 export { modules, formats, categoryOptions }
