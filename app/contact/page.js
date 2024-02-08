@@ -1,7 +1,9 @@
+"use client";
+
 import Contact from "components/Contact";
 
-export default async function ContactPage() {
+export default function ContactPage() {
+ 
+
   return <Contact />;
 }
-
-// export const revalidate = 60;

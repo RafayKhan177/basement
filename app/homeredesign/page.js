@@ -1,6 +1,8 @@
 import { Container, Image } from "@mantine/core";
 import BookShowing from "components/BookShowing";
+import VisitHomeRedesign from "components/VisitHomeRedesign";
 import GetInspired from "components/GetInspired";
+
 import Comparison from "components/Comparison";
 import Link from "next/link";
 import { Button } from "@nextui-org/react";
@@ -40,6 +42,8 @@ export default function Page() {
             </Link>
           </div>
         </div>
+        <GetInspired/>
+        <VisitHomeRedesign/>
       </section>
       <div id="Comparison">
         <Comparison />
