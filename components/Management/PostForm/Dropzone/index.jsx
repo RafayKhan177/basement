@@ -7,8 +7,8 @@ import classes from "./style.module.css";
 import { Button, Group, Text, rem } from "@mantine/core";
 import Image from "next/image";
 
-export default function DropzoneButton({ handleImage }) {
-  const [selectedImage, setSelectedImage] = useState(null);
+export default function DropzoneButton({ handleImage,defaultValue }) {
+  const [selectedImage, setSelectedImage] = useState(defaultValue);
   const openRef = useRef(null);
 
   const handleDrop = (files) => {

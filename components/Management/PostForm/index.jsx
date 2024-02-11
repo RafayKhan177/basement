@@ -41,6 +41,7 @@ export default function PostForm({ handleSave, props }) {
       <div className="flex flex-col my-10 rounded-md  p-10 gap-4">
         <DropzoneButton
           handleImage={(blob) => setFormData({ ...formData, imageUrl: blob })}
+          defaultValue={formData.imageUrl}
         />
 
         <Autocomplete
