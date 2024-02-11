@@ -2,7 +2,7 @@ import { Center, Container, Image } from "@mantine/core";
 import { Button } from "@nextui-org/react";
 import BookShowing from "components/BookShowing";
 import Comparison from "components/Comparison";
-import VisitHomeRedesign from "components/VisitHomeRedesign ";
+import VisitHomeRedesign from "components/VisitHomeRedesign";
 import SectionInfo from "components/common/SectionInfo";
 import FaqWithHeader from "components/Faq";
 import Link from "next/link";
