@@ -17,10 +17,6 @@
   font-size: var(--mantine-font-size-lg);
   padding: var(--mantine-spacing-lg) var(--mantine-spacing-xl);
   color: var(--mantine-color-black);
-
-  @mixin hover {
-    background-color: transparent;
-  }
 }
 
 .content {
@@ -50,8 +46,4 @@
   display: block;
   margin-top: var(--mantine-spacing-md);
 
-  @media (max-width: $mantine-breakpoint-sm) {
-    display: block;
-    width: 100%;
-  }
 }
