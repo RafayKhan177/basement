@@ -7,6 +7,7 @@ const nextConfig = {
       "images.pexel.com",
       "img.freepik.com",
       "localhost",
+      "firebasestorage.googleapis.com",
     ],
   },
 };

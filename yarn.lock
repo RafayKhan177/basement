@@ -658,6 +658,13 @@
     react-textarea-autosize "8.5.3"
     type-fest "^3.13.1"
 
+"@mantine/dropzone@^7.5.2":
+  version "7.5.2"
+  resolved "https://registry.yarnpkg.com/@mantine/dropzone/-/dropzone-7.5.2.tgz#d1216d63dd950ce5b5c4f89c19b4d9d6d2181de2"
+  integrity sha512-YjzaBEppLhb5F+lKpBSVeIGneCdisC+0nSertcjjo7QXPc++NR+WbVuTiPMYZoUuRbpJ2GRRTFZndmK1FvO+7w==
+  dependencies:
+    react-dropzone-esm "15.0.1"
+
 "@mantine/hooks@^7.4.2":
   version "7.4.2"
   resolved "https://registry.yarnpkg.com/@mantine/hooks/-/hooks-7.4.2.tgz#ca4d57961ef22ed1815874b95940c2cc2034564d"
@@ -2447,6 +2454,19 @@
   integrity sha512-FaruWX6KdudYloq1AHD/4nU+UsMTdNE8CKyrseXWEcgjDAbvkwJg2QGPAnfIJLIWsjZOSPLOAykK6fuYp4vp4A==
   dependencies:
     tslib "^2.4.0"
+
+"@tabler/icons-react@^2.47.0":
+  version "2.47.0"
+  resolved "https://registry.yarnpkg.com/@tabler/icons-react/-/icons-react-2.47.0.tgz#b704e7ae98f95be8bd6e938b4b2e84cd20b0cf31"
+  integrity sha512-iqly2FvCF/qUbgmvS8E40rVeYY7laltc5GUjRxQj59DuX0x/6CpKHTXt86YlI2whg4czvd/c8Ce8YR08uEku0g==
+  dependencies:
+    "@tabler/icons" "2.47.0"
+    prop-types "^15.7.2"
+
+"@tabler/icons@2.47.0":
+  version "2.47.0"
+  resolved "https://registry.yarnpkg.com/@tabler/icons/-/icons-2.47.0.tgz#c41c680d1947e3ab2d60af3febc4132287c60596"
+  integrity sha512-4w5evLh+7FUUiA1GucvGj2ReX2TvOjEr4ejXdwL/bsjoSkof6r1gQmzqI+VHrE2CpJpB3al7bCTulOkFa/RcyA==
 
 "@tanstack/react-virtual@^3.0.0-beta.60":
   version "3.0.2"
@@ -4639,6 +4659,13 @@ react-dom@^18:
   dependencies:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
+
+react-dropzone-esm@15.0.1:
+  version "15.0.1"
+  resolved "https://registry.yarnpkg.com/react-dropzone-esm/-/react-dropzone-esm-15.0.1.tgz#8c689638aaa9feb5b2a429dd565acfa6792263e5"
+  integrity sha512-RdeGpqwHnoV/IlDFpQji7t7pTtlC2O1i/Br0LWkRZ9hYtLyce814S71h5NolnCZXsIN5wrZId6+8eQj2EBnEzg==
+  dependencies:
+    prop-types "^15.8.1"
 
 react-icons@^5.0.1:
   version "5.0.1"

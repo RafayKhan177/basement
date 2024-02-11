@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import dynamic from "next/dynamic";
 import { formats, modules, categoryOptions } from "./FormModules";
 import { Autocomplete, AutocompleteItem, Input } from "@nextui-org/react";
+import DropzoneButton from "./Dropzone/index";
 import "react-quill/dist/quill.snow.css";
 
 const Editor = dynamic(() => import("react-quill"), {
@@ -16,7 +17,7 @@ export default function PostForm({ handleSave, props }) {
   const [formData, setFormData] = useState({
     title: props?.title || "",
     subtitle: props?.subtitle || "",
-    imageUrl: props?.imageUrl || "",
+    imageUrl: props?.imageUrl || null,
     category: props?.category || "BLOG", // Default category
   });
 
@@ -38,6 +39,10 @@ export default function PostForm({ handleSave, props }) {
   return (
     <section className="w-full overflow-hidden backdrop-blur-sm mt-4">
       <div className="flex flex-col my-10 rounded-md  p-10 gap-4">
+        <DropzoneButton
+          handleImage={(blob) => setFormData({ ...formData, imageUrl: blob })}
+        />
+
         <Autocomplete
           label="Select an Category"
           defaultInputValue={formData.category}
@@ -68,13 +73,13 @@ export default function PostForm({ handleSave, props }) {
           value={formData.subtitle}
           onChange={(e) => handleChange(e, "subtitle")}
         />
-        <Input
+        {/* <Input
           placeholder="Image Url"
           label={"Image URL"}
           className=" shadow-m"
           value={formData.imageUrl}
           onChange={(e) => handleChange(e, "imageUrl")}
-        />
+        /> */}
         {typeof document !== "undefined" && ( // Check if document is defined
           <Editor
             modules={modules}

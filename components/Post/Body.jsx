@@ -35,7 +35,7 @@ export default function Body({ props, link }) {
       <Container>
         <article className="mx-auto max-w-screen-md ">
           <div className="prose mx-auto my-3 dark:prose-invert prose-a:text-blue-600">
-            {props?.about || ""}
+            <div dangerouslySetInnerHTML={{ __html: props?.about }} />
           </div>
           <div className="mb-7 mt-7 flex justify-center">
             <Link
