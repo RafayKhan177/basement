@@ -46,21 +46,6 @@ export default function Page() {
               </Text>
             </Link>
           </Box>
-
-          {/* Inbox Management card */}
-          <Box className="min-w-[40vw] bg-purple-500 rounded-md flex-1 mr-2 p-6 cursor-pointer">
-            <Link href={"/management/post"}>
-              <ActionIcon variant="light" color="dark" aria-label="Settings">
-                <FaChartSimple />
-              </ActionIcon>
-              <Text mt={2} fontWeight="bold">
-                Inbox
-              </Text>
-              <Text mt={1} fontSize="sm">
-                Read and Manage Your Inbox.
-              </Text>
-            </Link>
-          </Box>
         </Flex>
       </Container>
     </>

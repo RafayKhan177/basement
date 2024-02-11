@@ -59,8 +59,11 @@ export default function Navbar(props) {
                   ))}
                 </div>
                 <div className="flex w-full items-center justify-between md:w-auto">
-                  <Link href="/" className="w-28 dark:hidden rounded-md align-middle justify-center flex">
-                    <p>RAFAY</p>
+                  <Link
+                    href="/"
+                    className="w-28 dark:hidden rounded-md align-middle justify-center flex"
+                  >
+                    <p>Khuram</p>
                   </Link>
                   <Link href="/" className="hidden w-28 dark:block">
                     {props.logoalt ? (
@@ -106,7 +109,11 @@ export default function Navbar(props) {
                       <div
                         onClick={() =>
                           item?.subpages
-                            ? (toggleMenu(), setSelectedSubpages({ subpages: item.subpages, label: item.label }))
+                            ? (toggleMenu(),
+                              setSelectedSubpages({
+                                subpages: item.subpages,
+                                label: item.label,
+                              }))
                             : router.push(item.href)
                         }
                         key={`${item.label}${index}`}
@@ -136,27 +143,31 @@ export default function Navbar(props) {
                           items={item.children}
                           mobile={true}
                         />
-                        ) : (
-                          <Fragment key={`${item.label}${index}`}>
-                        <div
-                          onClick={() =>
-                            item?.subpages
-                            ? (toggleMenu(), setSelectedSubpages({ subpages: item.subpages, label: item.label }))
-                            : router.push(item.href)
-                          }
-                          key={`${item.label}${index}`}
-                          className="w-full px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
-                          target={item.external ? "_blank" : ""}
-                          rel={item.external ? "noopener" : ""}
-                        >
-                          <span> {item.label}</span>
-                          {item.badge && (
-                            <span className="ml-2 rounded bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-600 dark:bg-cyan-200 dark:text-blue-800 ">
-                              {item.badge}
-                            </span>
-                          )}
-                        </div>
-                      </Fragment>
+                      ) : (
+                        <Fragment key={`${item.label}${index}`}>
+                          <div
+                            onClick={() =>
+                              item?.subpages
+                                ? (toggleMenu(),
+                                  setSelectedSubpages({
+                                    subpages: item.subpages,
+                                    label: item.label,
+                                  }))
+                                : router.push(item.href)
+                            }
+                            key={`${item.label}${index}`}
+                            className="w-full px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
+                            target={item.external ? "_blank" : ""}
+                            rel={item.external ? "noopener" : ""}
+                          >
+                            <span> {item.label}</span>
+                            {item.badge && (
+                              <span className="ml-2 rounded bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-600 dark:bg-cyan-200 dark:text-blue-800 ">
+                                {item.badge}
+                              </span>
+                            )}
+                          </div>
+                        </Fragment>
                       )}
                     </Fragment>
                   ))}

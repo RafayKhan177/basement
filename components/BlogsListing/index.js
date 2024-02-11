@@ -42,9 +42,9 @@ const BlogsListing = ({ all, category }) => {
       <SectionHeader
         headerInfo={{
           title: "OUR PROJECTS",
-          subtitle: "Renovations by [Campany Name]",
+          subtitle: "Renovations by Khuram",
           description:
-            " Explore some of our recent renovation projects and see why homeowners choose [Campany Name] for their home improvement needs.",
+            " Explore some of our recent renovation projects and see why homeowners choose Khuram for their home improvement needs.",
         }}
       />
       <div className="gap-4 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">

@@ -44,7 +44,7 @@ export default function Page() {
       {/* <Header admin={true} /> */}
       <Container size={"lg"}>
         {loading ? ( // Show loader if loading is true
-          <Center height="100vh">
+          <Center height="100vh" className="mt-[30vh]">
             <Spinner size="xl" />
           </Center>
         ) : (

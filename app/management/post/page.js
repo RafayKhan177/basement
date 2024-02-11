@@ -7,10 +7,13 @@ import { Container } from "@mantine/core";
 // import Header from "components/Header";
 
 export default function Page() {
-  const handleSave = async (data) => {
+  const handleSave = async (id, data) => {
     try {
       const res = await postDoc(data, "blogs");
-    } catch (error) {}
+      console.log(data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
