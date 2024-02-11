@@ -4,9 +4,7 @@ import Container from "../container";
 import Link from "next/link";
 import SectionHeader from "../common/SectionHeader";
 
-export default function Body({ props }) {
-  const { title, mainImage, body, subtitle, id } = props;
-
+export default function Body({ props, link }) {
   return (
     <>
       <Container className="!pt-0">
@@ -15,8 +13,8 @@ export default function Body({ props }) {
 
           <SectionHeader
             headerInfo={{
-              title: title,
-              subtitle: subtitle,
+              title: props?.title || "",
+              subtitle: props?.subtitle || "",
               description: "DETAILS ABOUT THE BLOGS",
             }}
           />
@@ -25,7 +23,7 @@ export default function Body({ props }) {
 
       <div className="relative z-0 mx-auto aspect-video max-w-screen-lg overflow-hidden lg:rounded-lg">
         <Image
-          src={mainImage}
+          src={props?.imageUrl || ""}
           alt={"Thumbnail"}
           loading="eager"
           fill
@@ -37,14 +35,14 @@ export default function Body({ props }) {
       <Container>
         <article className="mx-auto max-w-screen-md ">
           <div className="prose mx-auto my-3 dark:prose-invert prose-a:text-blue-600">
-            {body}
+            {props?.about || ""}
           </div>
           <div className="mb-7 mt-7 flex justify-center">
             <Link
-              href="/blogs"
+              href={link}
               className="bg-brand-secondary/20 rounded-full px-5 py-2 text-sm text-blue-600 dark:text-blue-500 "
             >
-              ← View all posts
+              ← View all {posts}
             </Link>
           </div>
         </article>

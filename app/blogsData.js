@@ -9,8 +9,8 @@ const blogsData = [
     img: img,
     price: "$5.50",
     createdAt: "2024-01-21T12:00:00Z",
-    mainImage: img,
-    body: <p>test</p>,
+    imageUrl: img,
+    about: <p>test</p>,
   },
   {
     id: "0",
@@ -19,8 +19,8 @@ const blogsData = [
     img: img,
     price: "$3.00",
     createdAt: "",
-    mainImage: img,
-    body: <p>test</p>,
+    imageUrl: img,
+    about: <p>test</p>,
   },
   {
     id: "0",
@@ -29,8 +29,8 @@ const blogsData = [
     img: img,
     price: "$10.00",
     createdAt: "",
-    mainImage: img,
-    body: <p>test</p>,
+    imageUrl: img,
+    about: <p>test</p>,
   },
   {
     id: "0",
@@ -39,8 +39,8 @@ const blogsData = [
     img: img,
     price: "$5.30",
     createdAt: "",
-    mainImage: img,
-    body: <p>test</p>,
+    imageUrl: img,
+    about: <p>test</p>,
   },
   {
     id: "0",
@@ -49,8 +49,8 @@ const blogsData = [
     img: img,
     price: "$15.70",
     createdAt: "",
-    mainImage: img,
-    body: <p>test</p>,
+    imageUrl: img,
+    about: <p>test</p>,
   },
   {
     id: "0",
@@ -59,8 +59,8 @@ const blogsData = [
     img: img,
     price: "$8.00",
     createdAt: "",
-    mainImage: img,
-    body: <p>test</p>,
+    imageUrl: img,
+    about: <p>test</p>,
   },
   {
     id: "0",
@@ -69,8 +69,8 @@ const blogsData = [
     img: img,
     price: "$7.50",
     createdAt: "",
-    mainImage: img,
-    body: <p>test</p>,
+    imageUrl: img,
+    about: <p>test</p>,
   },
   {
     id: "0",
@@ -79,8 +79,8 @@ const blogsData = [
     img: img,
     price: "$12.20",
     createdAt: "",
-    mainImage: img,
-    body: <p>test</p>,
+    imageUrl: img,
+    about: <p>test</p>,
   },
 ];
 
